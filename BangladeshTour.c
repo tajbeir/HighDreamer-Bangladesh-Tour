@@ -4,6 +4,9 @@
 #include<string.h>
 
 
+
+
+
 void traveller(){
    int press;
    printf("\n\n\t\t\t\t\t\t...................\n");
@@ -42,6 +45,66 @@ void guide(){
 
 }
 
+void update(){
+   int press;
+   printf("\n\n\t\t\t\t\t\t...................\n");
+   printf("\t\t\t\t\t\t: BANGLADESH TOUR :\n");
+   printf("\t\t\t\t\t\t:.................:\n\n\n\n");
+   printf("\t\t\t\t Update Registration \n\n\n\n");
+   printf("\t\t\t\t press 1 for exit.....\n");
+   scanf("%d",&press);
+   system("cls");
+
+       switch(press)
+        {
+            case 1:
+                registration();
+                break;
+        }
+
+
+}
+
+void dlt(){
+   int press;
+   printf("\n\n\t\t\t\t\t\t...................\n");
+   printf("\t\t\t\t\t\t: BANGLADESH TOUR :\n");
+   printf("\t\t\t\t\t\t:.................:\n\n\n\n");
+   printf("\t\t\t\t Delete Registration \n\n\n\n");
+   printf("\t\t\t\t press 1 for exit.....\n");
+   scanf("%d",&press);
+   system("cls");
+
+       switch(press)
+        {
+            case 1:
+                registration();
+                break;
+        }
+
+
+}
+
+void read(){
+   int press;
+   printf("\n\n\t\t\t\t\t\t...................\n");
+   printf("\t\t\t\t\t\t: BANGLADESH TOUR :\n");
+   printf("\t\t\t\t\t\t:.................:\n\n\n\n");
+   printf("\t\t\t\t Read Registration \n\n\n\n");
+   printf("\t\t\t\t press 1 for exit.....\n");
+   scanf("%d",&press);
+   system("cls");
+
+       switch(press)
+        {
+            case 1:
+                registration();
+                break;
+        }
+
+
+}
+
 void registration(){
   int press;
   while(1){
@@ -50,7 +113,10 @@ void registration(){
    printf("\t\t\t\t\t\t:.................:\n\n\n\n");
    printf("\n\t\t\t\t 1. REGISTRATION AS A TRAVELLER \n\n");
    printf("\t\t\t\t 2. REGISTRATION AS A GUIDE\n\n ");
-   printf("\t\t\t\t 3.Exit\n\n\n\n");
+   printf("\t\t\t\t 3. Update registration \n\n ");
+    printf("\t\t\t\t 4. Delete registration \n\n ");
+    printf("\t\t\t\t 5. Read registration \n\n ");
+   printf("\t\t\t\t 6.Exit\n\n\n\n");
    printf("\t\t\t\t press any key from 1 to 3.....\n");
    scanf("%d",&press);
    system("cls");
@@ -62,7 +128,15 @@ void registration(){
             case 2:
                 guide();
                 break;
-             case 3:
+            case 3:
+                update();
+                break;
+            case 4:
+                dlt();
+                break;
+            case 5:
+                read();
+             case 6:
                dashBoard();
         }
   }
