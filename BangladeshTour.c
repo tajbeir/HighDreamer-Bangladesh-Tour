@@ -8,14 +8,57 @@
 
 
 void traveller(){
+
+
+FILE *file;
+char name[40];
+int age, phoneNumber,num,i;
+
    int press;
    printf("\n\n\t\t\t\t\t\t...................\n");
    printf("\t\t\t\t\t\t: BANGLADESH TOUR :\n");
    printf("\t\t\t\t\t\t:.................:\n\n\n\n");
    printf("\t\t\t\t PLEASE ENTER YOUR RIGHT INFORMATION AS A TRAVELLER\n\n\n\n");
+
+
+
+file=fopen("traveller.txt","a");
+if(file==NULL)
+{
+    printf("File does not exist");
+}
+else{
+
+    printf("\n\n\t\t\t\tEnter Number of travellers: ");
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    {
+
+        printf("\t\t\t\tEnter your name: ");
+        scanf("%s",&name);
+
+        printf("\t\t\t\tAge : ");
+        scanf("%d",&age);
+
+        printf("\t\t\t\tPhone number: ");
+        scanf("%d",&phoneNumber);
+
+        fprintf(file,"%s %d %d\n",name,age,phoneNumber);
+    }
+    fclose(file);
+}
+
+
    printf("\t\t\t\t press 1 for exit.....\n");
+
    scanf("%d",&press);
+
+
+
+
    system("cls");
+
+
 
        switch(press)
         {
