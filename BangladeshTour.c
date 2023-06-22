@@ -117,7 +117,7 @@ void registration(){
     printf("\t\t\t\t 4. Delete registration \n\n ");
     printf("\t\t\t\t 5. Read registration \n\n ");
    printf("\t\t\t\t 6.Exit\n\n\n\n");
-   printf("\t\t\t\t press any key from 1 to 3.....\n");
+   printf("\t\t\t\t press any key from 1 to 6.....\n");
    scanf("%d",&press);
    system("cls");
         switch(press)
