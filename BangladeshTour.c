@@ -8,8 +8,7 @@ void traveller(){
    printf("\t\t\t\t\t: BANGLADESH TOUR :\n");
    printf("\t\t\t\t\t:.................:\n\n\n");
    printf("\tPLEASE ENTER YOUR RIGHT INFORMATION\n\n");
-
-
+   
 }
 void guide(){
    printf("\n\n\t\t\t\t\t...................\n");
@@ -20,16 +19,16 @@ void guide(){
 }
 
 void registration(){
-    int press;
+  int press;
   while(1){
-   printf("\n\n\t\t\t\t\t...................\n");
-   printf("\t\t\t\t\t: BANGLADESH TOUR :\n");
-   printf("\t\t\t\t\t:.................:\n\n\n");
+    printf("\n\n\t\t\t\t\t...................\n");
+    printf("\t\t\t\t\t: BANGLADESH TOUR :\n");
+    printf("\t\t\t\t\t:.................:\n\n\n");
     printf("\n\t 1. REGISTRATION AS A TRAVELLER \n");
     printf("\t 2. REGISTRATION AS A GUIDE\n ");
     printf("\t 3.Exit\n\n");
     printf("   press any key from 1 to 3.....\n");
-  scanf("%d",&press);
+    scanf("%d",&press);
         switch(press)
         {
             case 1:
@@ -55,15 +54,15 @@ void logIn(){
 
 }
 void dashBoard(){
-    int press;
-    while(1){
+ int press;
+ while(1){
    printf("\n\n\t\t\t\t\t...................\n");
    printf("\t\t\t\t\t: BANGLADESH TOUR :\n");
    printf("\t\t\t\t\t:.................:\n\n\n");
    printf("\t 1.REGISTRATION\n");
    printf("\t 2.LOG IN\n\n");
    printf("   press any key from 1 or 2.....\n");
-  scanf("%d",&press);
+   scanf("%d",&press);
         switch(press)
         {
             case 1:
@@ -75,22 +74,19 @@ void dashBoard(){
 
         }
     }
-
 }
 
 int main(){
 
  int press;
- while(1)
-    {
+ while(1) {
    printf("\n\n\t\t\t\t\t...................\n");
    printf("\t\t\t\t\t: BANGLADESH TOUR :\n");
    printf("\t\t\t\t\t:.................:\n\n\n");
-  printf("\n\n\t\t\t TRAVEL IS AN INVESTMENT IN YOURSELF\n\n\n");
-  printf("\t\t\t WELCOME TO BANGLADESH, THE LAND OF BEAUTY\n\n\n\n");
-
-  printf("   press 1 to continue.....\n");
-  scanf("%d",&press);
+   printf("\n\n\t\t\t TRAVEL IS AN INVESTMENT IN YOURSELF\n\n\n");
+   printf("\t\t\t WELCOME TO BANGLADESH, THE LAND OF BEAUTY\n\n\n\n");
+   printf("   press 1 to continue.....\n");
+   scanf("%d",&press);
         switch(press)
         {
             case 1:
@@ -98,7 +94,4 @@ int main(){
                 break;
         }
     }
-
-
-
 }
