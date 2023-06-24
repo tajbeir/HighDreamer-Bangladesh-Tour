@@ -33,8 +33,7 @@ else{
     scanf("%d",&num);
     for(i=1;i<=num;i++)
     {
-
-        printf("\t\t\t\tEnter your name: ");
+      printf("\t\t\t\tEnter your name: ");
         scanf("%s",&name);
 
         printf("\t\t\t\tAge : ");
@@ -47,19 +46,10 @@ else{
     }
     fclose(file);
 }
-
-
    printf("\t\t\t\t press 1 for exit.....\n");
 
    scanf("%d",&press);
-
-
-
-
    system("cls");
-
-
-
        switch(press)
         {
             case 1:
@@ -157,8 +147,8 @@ void registration(){
    printf("\n\t\t\t\t 1. REGISTRATION AS A TRAVELLER \n\n");
    printf("\t\t\t\t 2. REGISTRATION AS A GUIDE\n\n ");
    printf("\t\t\t\t 3. Update registration \n\n ");
-    printf("\t\t\t\t 4. Delete registration \n\n ");
-    printf("\t\t\t\t 5. Read registration \n\n ");
+   printf("\t\t\t\t 4. Delete registration \n\n ");
+   printf("\t\t\t\t 5. Read registration \n\n ");
    printf("\t\t\t\t 6.Exit\n\n\n\n");
    printf("\t\t\t\t press any key from 1 to 6.....\n");
    scanf("%d",&press);
