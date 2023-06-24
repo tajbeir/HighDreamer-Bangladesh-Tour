@@ -141,7 +141,7 @@ void guide(){
     scanf("%s", newUser.username1);
     printf("\t\t\t\t Enter District: ");
     scanf("%s", &district);
-    printf("\t\t\t\t Enter National ID Or Birth Certificate Number: ");
+    printf("\t\t\t\t Enter National ID \n\t\t\t\t Or Birth Certificate Number: ");
     scanf("%lld", &ID);
     printf("\t\t\t\t Enter mobile number: ");
     scanf("%lld", &mb);
