@@ -5,21 +5,30 @@
 #define MAX_USERS 100
 #define MAX_USERNAME_LENGTH 20
 #define MAX_PASSWORD_LENGTH 20
+#define MAX_ADDRESS_LENGTH 20
+#define MAX_ID_LENGTH 20
+#define MAX_MOBILE_LENGTH 20
 
 struct User {
     char username[MAX_USERNAME_LENGTH];
     char username1[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
+    char address[MAX_ADDRESS_LENGTH];
+    char id[MAX_ID_LENGTH];
+    char mobile[MAX_MOBILE_LENGTH];
 };
-
 struct User users[MAX_USERS];
 int numUsers = 0;
+
+
+
 
 
 int logIn() {
     char username[MAX_USERNAME_LENGTH];
     char username1[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
+
     int press;
     printf("\n\n\t\t\t\t\t\t...................\n");
     printf("\t\t\t\t\t\t: BANGLADESH TOUR :\n");
@@ -48,8 +57,9 @@ int logIn() {
     }
 
     system("cls");
+    fclose(log);
      printf("\n\n\t\t\t\t Invalid username or password. Please Try Again\n");
-     fclose(log);
+
     logIn();
     return 0;
 }
@@ -61,9 +71,7 @@ void traveller(){
    printf("\t\t\t\t\t\t: BANGLADESH TOUR :\n");
    printf("\t\t\t\t\t\t:.................:\n\n\n\n");
    printf("\t\t\t\t PLEASE ENTER YOUR RIGHT INFORMATION AS A TRAVELLER\n\n\n\n");
-    long long int ID;
-    char country;
-    long long int mb;
+
     int press;
     FILE *file;
     if (numUsers == MAX_USERS) {
@@ -72,29 +80,37 @@ void traveller(){
     }
 
     struct User newUser;
-    file=fopen("traveller.txt","a");
+    file=fopen("toursts.txt","a");
       if(file==NULL)
       {
          printf("\n\n\t\t\t\tFile does not exist");
        }
-     else{
+
 
     printf("\t\t\t\t First name: ");
     scanf("%s", newUser.username);
     printf("\t\t\t\t Last name: ");
     scanf("%s", newUser.username1);
     printf("\t\t\t\t Enter Country: ");
-    scanf("%s", &country);
+    scanf("%s", newUser.address);
     printf("\t\t\t\t Enter Passport Number: ");
-    scanf("%lld", &ID);
+    scanf("%s",  newUser.id);
     printf("\t\t\t\t Enter mobile number: ");
-    scanf("%lld", &mb);
+    scanf("%s",  newUser.mobile);
     printf("\t\t\t\t Enter password: ");
     scanf("%s", newUser.password);
 
+
+    fprintf(file,"\n NAME: %s ", newUser.username);
+    fprintf(file," %s\n", newUser.username1);
+    fprintf(file," COUNTRY : %s\n", newUser.address);
+    fprintf(file," PASSPORT  NUMBER: %s\n", newUser.id);
+    fprintf(file," MOBILE NUMBER: %s\n", newUser.mobile);
+
     users[numUsers] = newUser;
     numUsers++;
-   }
+    fclose(file);
+
     printf("\t\t\t\t press 1 for Log In.....\n");
     scanf("%d",&press);
     system("cls");
@@ -117,9 +133,7 @@ void guide(){
    printf("\t\t\t\t\t\t: BANGLADESH TOUR :\n");
    printf("\t\t\t\t\t\t:.................:\n\n\n\n");
    printf("\t\t\t\t PLEASE ENTER YOUR RIGHT INFORMATION AS A GUIDE\n\n\n\n");
-    long long int ID;
-    char district;
-    long long int mb;
+
     int press;
     FILE *file;
     if (numUsers == MAX_USERS) {
@@ -128,29 +142,39 @@ void guide(){
     }
 
     struct User newUser;
-    file=fopen("traveller.txt","a");
+    file=fopen("guide.txt","a");
       if(file==NULL)
       {
          printf("File does not exist");
        }
-     else{
+
 
     printf("\t\t\t\t First name: ");
     scanf("%s", newUser.username);
     printf("\t\t\t\t Last name: ");
     scanf("%s", newUser.username1);
     printf("\t\t\t\t Enter District: ");
-    scanf("%s", &district);
+    scanf("%s", newUser.address);
     printf("\t\t\t\t Enter National ID \n\t\t\t\t Or Birth Certificate Number: ");
-    scanf("%lld", &ID);
+    scanf("%s",  newUser.id);
     printf("\t\t\t\t Enter mobile number: ");
-    scanf("%lld", &mb);
+    scanf("%s",  newUser.mobile);
     printf("\t\t\t\t Enter password: ");
     scanf("%s", newUser.password);
 
-    users[numUsers] = newUser;
+
+
+    fprintf(file,"\n NAME: %s ", newUser.username);
+    fprintf(file," %s\n", newUser.username1);
+    fprintf(file,"  DISTRICT: %s\n", newUser.address);
+    fprintf(file," NID OR BIRTH CERTIFICATE NUMBER: %s\n", newUser.id);
+    fprintf(file," MOBILE NUMBER: %s\n", newUser.mobile);
+
+     users[numUsers] = newUser;
     numUsers++;
-   }
+    fclose(file);
+
+
    printf("\n\n\t\t\t\t Registration successful. Now Log In\n\n");
     printf("\t\t\t\t press 1 for Log In.....\n");
     scanf("%d",&press);
@@ -179,7 +203,7 @@ void registration(){
    printf("\t\t\t\t\t\t:.................:\n\n\n\n");
    printf("\n\t\t\t\t 1. REGISTRATION AS A TRAVELLER \n\n");
    printf("\t\t\t\t 2. REGISTRATION AS A GUIDE\n\n ");
-   printf("\t\t\t\t 3.Exit\n\n\n\n");
+   printf("\t\t\t\t 3.EXIT\n\n\n\n");
    printf("\t\t\t\t press any key from 1 to 3.....\n");
    scanf("%d",&press);
    system("cls");
@@ -192,7 +216,7 @@ void registration(){
                 guide();
                 break;
              case 3:
-               dashBoard();
+              dashBoard();
              default:
                 printf("\t\t\t\t Invalid choice. Please try again.\n");
                 break;
